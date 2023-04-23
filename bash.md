@@ -119,7 +119,7 @@ done
 	    nc -zw1 $host 80
 	    if (($? != 0))
             then
-              echo $(date) $ip:80 works >> error.log
+              echo $? $host `date` works >> error.log
  	      break
  	    else 
  	      echo $? $host `date` >> nc_test.log
